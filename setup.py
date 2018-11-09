@@ -29,11 +29,6 @@ class Tox(TestCommand):
         sys.exit(errno)
 
 
-fabric_package = 'fabric<2.0.>=1.7.0'
-if sys.version_info >= (3, 0):  # substitute fabric3 for python 3 environments
-    fabric_package = 'fabric3>=1.13.1.post1'
-
-
 setup(
     name='fabtools',
     version='0.21.0.dev0',
@@ -44,8 +39,8 @@ setup(
     url='http://fabtools.readthedocs.org/',
     license='BSD',
     install_requires=[
-        fabric_package,
-        "six",
+        'fabric3>=1.14.post1',
+        'six',
     ],
     setup_requires=[],
     tests_require=[
